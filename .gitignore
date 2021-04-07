@@ -1,0 +1,22 @@
+.git
+.env
+.idea*
+build
+SimpleLinearDep.iml
+dist
+*.egg-info
+*.egg/
+*.pyc
+*.swp
+*.db
+*.log
+*.iml
+
+.tox
+.coverage
+html/*
+__pycache__
+*.cache*
+
+# Compiled Documentation
+docs/_build

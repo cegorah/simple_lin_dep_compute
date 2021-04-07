@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    env_file:
+      - .env
+    restart: on-failure
+    expose:
+      - 8080
+
+
+  nginx:
+    build: containers/services/nginx
+    ports:
+      - "80:80"
+    restart: always
+    links:
+      - api
+    depends_on:
+      - api
